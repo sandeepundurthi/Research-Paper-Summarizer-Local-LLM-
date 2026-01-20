@@ -1,0 +1,74 @@
+{
+  "title_guess": null,
+  "one_sentence_summary": "The paper provides an in-depth analysis of H-1B and F1 visa data using a comprehensive dataset of 116,000 records and over 150 features.",
+  "contributions": [
+    {
+      "bullet": "This study explores the use of Random Forest Classifier to deal with imbalanced data in visa applications.",
+      "evidence": [
+        "c00"
+      ]
+    },
+    {
+      "bullet": "Synthetic balancing using SMOTE significantly improved the model's ability to accurately predict outcomes.",
+      "evidence": [
+        "c00",
+        "c02"
+      ]
+    }
+  ],
+  "method_overview": [
+    {
+      "bullet": "Fuzzy string matching was used to deal with variations in spellings and characters, and one-hot encoding was applied to the 'EMPLOYER_STATE' feature.",
+      "evidence": [
+        "c01"
+      ]
+    },
+    {
+      "bullet": "The 'MAJOR_MATCH' feature was engineered using two features: 'MAJOR_FIELD_OF_STUDY' and 'FOREIGN_WORKER_INFO_MAJOR', and fuzzy string matching with a similarity threshold of 80% was used for the 'MAJOR_MATCH' feature.",
+      "evidence": [
+        "c01"
+      ]
+    }
+  ],
+  "key_results": [
+    {
+      "bullet": "Using SMOTE to augment new data for the minority class improved performance metric values, and synthetic oversampling for the minority class achieved the best results in experiment 8.",
+      "evidence": [
+        "c02",
+        "c04"
+      ]
+    },
+    {
+      "bullet": "The classifier was highly biased towards the majority class in experiments 1 and 2, but balancing the dataset by sampling the same number of instances from both classes resulted in better performance.",
+      "evidence": [
+        "c02",
+        "c05"
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "bullet": "The study highlights the limitations of using Random Forest Classifier for imbalanced data and suggests that further research is needed to improve its performance.",
+      "evidence": [
+        "c06"
+      ]
+    }
+  ],
+  "future_work": [
+    {
+      "bullet": "Future work includes exploring other machine learning algorithms and techniques to deal with imbalanced data in visa applications.",
+      "evidence": [
+        "c07"
+      ]
+    }
+  ],
+  "keywords": [
+    "H-1B visa",
+    "F1 visa",
+    "data analysis",
+    "machine learning",
+    "Random Forest Classifier",
+    "SMOTE"
+  ],
+  "confidence_score": 0.5
+}

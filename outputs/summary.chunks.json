@@ -1,0 +1,107 @@
+[
+  {
+    "chunk_id": "c00",
+    "section_guess": "introduction",
+    "claims": [
+      "The paper provides an in-depth analysis of H-1B and F1 visa data.",
+      "A comprehensive dataset of 116,000 records and over 150 features was used for the analysis.",
+      "Data pre-processing, feature engineering, and sampling techniques were employed to handle data imbalance and improve model performance.",
+      "The Random Forest Classifier was explored under various configurations and sampling approaches to deal with the large imbalance between 'certified' and 'denied' visa statuses.",
+      "Synthetic balancing using SMOTE significantly improved the model's ability to accurately predict outcomes."
+    ],
+    "numbers": [
+      {
+        "value": "116,000",
+        "context": "number of records in the dataset"
+      },
+      {
+        "value": "150+",
+        "context": "number of features in the dataset"
+      }
+    ],
+    "keywords": [
+      "H-1B visa",
+      "F1 visa",
+      "data analysis",
+      "machine learning",
+      "Random Forest Classifier",
+      "SMOTE"
+    ]
+  },
+  {
+    "chunk_id": "c01",
+    "section_guess": "methods/results",
+    "claims": [
+      "Fuzzy string matching was used to deal with variations in spellings and characters.",
+      "The 'EMPLOYER_STATE' feature had variations in spellings and characters, such as 'California', 'CALIFORNIA', and 'California [PAGE 3] 34523'.",
+      "A list of all US states was created and used against all values in the 'EMPLOYER_STATE' feature to match using fuzzy string matching.",
+      "The 'MAJOR_MATCH' feature was engineered using two features: 'MAJOR_FIELD_OF_STUDY' and 'FOREIGN_WORKER_INFO_MAJOR'.",
+      "Fuzzy string matching with a similarity threshold of 80% was used for the 'MAJOR_MATCH' feature.",
+      "One-hot encoding was applied to the 'EMPLOYER_STATE' feature.",
+      "The 'COUNTRY_OF_CITIZENSHIP' feature was also one-hot encoded due to its importance in visa applications.",
+      "The 'CASE_STATUS' feature had 4 distinct classes: Certified, Certified - Expired, Withdrawn, and Denied."
+    ],
+    "numbers": [
+      {
+        "value": "42097",
+        "context": "number of records with Certified status"
+      },
+      {
+        "value": "41069",
+        "context": "number of records with Certified - Expired status"
+      },
+      {
+        "value": "5066",
+        "context": "number of records with Withdrawn status"
+      },
+      {
+        "value": "2132",
+        "context": "number of records with Denied status"
+      }
+    ],
+    "keywords": [
+      "Fuzzy string matching",
+      "One-hot encoding",
+      "Random Forest Classifier",
+      "Imbalanced data",
+      "Binary classification",
+      "Feature importance",
+      "SMOTE",
+      "Synthetic Minority Oversampling Technique"
+    ]
+  },
+  {
+    "chunk_id": "c02",
+    "section_guess": "results",
+    "claims": [
+      "The classifier was highly biased towards the majority class in experiments 1 and 2.",
+      "Using SMOTE to augment new data for the minority class improved performance metric values.",
+      "Down-sampling the majority class improved the classifier's ability to identify instances from the negative class.",
+      "Balancing the dataset by sampling the same number of instances from both classes resulted in better performance.",
+      "Synthetic oversampling for the minority class achieved the best results in experiment 8."
+    ],
+    "numbers": [
+      {
+        "value": "0.98",
+        "context": "precision value for majority class"
+      },
+      {
+        "value": "0.07",
+        "context": "recall value for minority class"
+      },
+      {
+        "value": "0.74",
+        "context": "overall accuracy in experiment 7"
+      }
+    ],
+    "keywords": [
+      "class imbalance",
+      "SMOTE",
+      "synthetic oversampling",
+      "down-sampling",
+      "up-sampling",
+      "binary classifier",
+      "performance metric values"
+    ]
+  }
+]
